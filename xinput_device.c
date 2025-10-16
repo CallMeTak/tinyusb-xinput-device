@@ -1,5 +1,5 @@
 #include "tusb_option.h"
-#if (TUSB_OPT_HOST_ENABLED && CFG_TUH_XINPUT)
+#if (TUSB_OPT_DEVICE_ENABLED && CFG_TUH_XINPUT)
 #include "xinput_device.h"
 #include "device/usbd.h"
 #include "device/usbd_pvt.h"
