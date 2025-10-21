@@ -77,7 +77,10 @@ extern "C"
     /// @return
     /// This is a helper method useful when using xinput_host library (for example in a passthrough application)
     void tud_xinput_update_state(xinput_state_t *state);
-
+    
+    /// @brief Reset the internal gamepad state to all zeros.
+    /// This is useful to call when the device is unplugged from the host.
+    void tud_xinput_reset_state();
     void tud_xinput_press_button(XboxButton button);
     void tud_xinput_release_button(XboxButton button);
 

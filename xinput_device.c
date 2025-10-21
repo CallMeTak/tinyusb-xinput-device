@@ -47,7 +47,10 @@ void tud_xinput_update_state(xinput_state_t *state)
     // Copy state into the local gamepad_report buffer
     memcpy((uint8_t *)&xinputd_itf.gamepad_report + 2, state, sizeof(xinput_state_t));
 }
-
+void tud_xinput_reset_state()
+{
+    memset(&xinputd_itf.gamepad_state, 0, sizeof(xinputd_itf.gamepad_state));
+}
 // Application helper methods
 // May separate into a separate header/source file later
 void tud_xinput_press_button(XboxButton button)
