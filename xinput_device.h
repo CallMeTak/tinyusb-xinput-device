@@ -1,3 +1,6 @@
+
+#ifndef _TUSB_XINPUT_DEVICE_H_
+#define _TUSB_XINPUT_DEVICE_H_
 #ifdef __cplusplus
 extern "C"
 {
@@ -102,6 +105,8 @@ extern "C"
         /* Endpoint Out */ \
         7, TUSB_DESC_ENDPOINT, _epout, TUSB_XFER_INTERRUPT, U16_TO_U8S_LE(_epsize), 8
 
+extern usbd_class_driver_t const usbd_xinput_driver;
 #ifdef __cplusplus
 }
 #endif
+#endif /* _TUSB_XINPUT_DEVICE_H_ */
