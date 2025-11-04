@@ -7,7 +7,7 @@ extern "C"
 #endif
 #include "pico/stdlib.h"
 #include "tusb_config.h"
-
+#include "device/usbd_pvt.h"
 #define TUD_XINPUT_CLASS 0xFF
 #define TUD_XINPUT_SUBCLASS 0x5D
 #define TUD_XINPUT_PROTOCOL 0x01
